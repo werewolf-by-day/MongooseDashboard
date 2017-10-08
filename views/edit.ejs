@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Edit snek</title>
+    </head>
+    <body>
+        <h1>Make changes to your snek!</h1>
+        <h3><%= snek.name %></h3>
+        <p>Speed: <%= snek.speed %></p>
+        <hr>
+        <form action="/<%= snek.id %>" method="post">
+            Change Snek Name:
+            <input type="text" name='name'>
+            <p>Change Snek Speed:
+            <input type="text" name='speed'><p>
+            <input type="submit" value="Update!">
+        </form>
+
+        <p><a href="/sneks/new">Create new snek</a></p>
+        <p><a href="/">Home</a>
+
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mongoose Dashboard</title>
+    <!--<link href="style.css" rel="stylesheet">-->
+  </head>
+  <body>
+    <div id="wrapper">
+	    <h1>Add a new Snek!</h1>
+	    <% if (typeof(errors) != 'undefined') { %>
+        	<h3>ERRORS:</h3>
+            <% for (var error in errors) { %>
+                <p><%= errors[error].message %></p>
+            <% } %>
+        <% } %>
+	    <form action="/sneks" method="post">
+	        New Snek Name:
+	        <input type="text" name='name'>
+	        <p>Enter Snek Speed:
+	        <input type="text" name='speed'><p>
+	        <input type="submit" value="Add snek!">
+	    </form>
+	    <form action="/" method="get">
+	    	<input type="submit" value="Go to the snek pit!">
+	    </form>
+    </div>
+  </body>
+</html>
